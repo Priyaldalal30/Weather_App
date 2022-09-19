@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Recursive:wght@300;400&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://kit.fontawesome.com/5bde5bf2d0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <form id="search-form">
+          <input
+        type="search"
+        placeholder="Type City"
+        id="city-input"
+        />
+         <button class="search">🔍</button>      
+          <button id="location">📍</button>
+        </form>
+        <div id="city">Woking</div>
+         <div id="date">Wednesday 7th September 15:30</div>
+          <h3>
+          <span id="temp">21°</span>
+          <span id="units">
+            <a href="#" id="celsius-link">C</a> |
+            <a href="#" id="fahrenheit-link">F</a>
+          </span>
+          </h3>
+           <div id="description" >Partly Cloudy</div>
+        <h5>
+          <div>H:
+            <span id="high">19</span>
+            <span class="high"> °C | L:</span><span id="low">19</span>
+            <span class="low"> °C</span>
+          </div> 
+        </h5>
+          <h7>
+            <div class="row">
+              <div class="col-4">
+                <div class="weathericon">⛈</div>
+              </div>
+              <div class="col-8">
+                <div class="details">
+                  <br /> 
+                  <div>Humidity: 
+                    <span id="humidity">91</span> <span class="unit">%</span>
+                  </div>  
+                  <br />
+                  <div>Wind:
+                    <span id="wind">5</span> <span class="unit">mph</span>
+                  </div> 
+                  <br />
+                  <div>Pressure:
+                    <span id="pressure">5</span> <span class="unit">hPa</span>  
+                  </div>
+                </div>
+              </div>
+              <br />
+            </div>
+          </h7>
+          <div class="days"></div>
+            <div class="row">
+              <div class="col-2">
+                <div class="smallcard1" style="width: 8rem;">
+                  <div class="card-body">
+                    <p class="card-text">Fri <br /> <i class="fa-solid fa-cloud-showers-heavy"> </i> <br /> L:13°C H:19°C</p>
+                 </div>
+                </div>
+              </div>
+                <div class="col-2">
+                <div class="smallcard2" style="width: 8rem;">
+                  <div class="card-body">
+                    <p class="card-text">Sat <br /> <i class="fa-sharp fa-solid fa-cloud-sun"> </i> <br /> L:12°C H:21°C</p>
+                 </div>
+                </div>
+              </div>
+                <div class="col-2">
+                <div class="smallcard3" style="width: 8rem;">
+                  <div class="card-body">
+                    <p class="card-text">Sun <br /> <i class="fa-solid fa-cloud"></i> <br /> L:11°C H:22°C</p>
+                 </div>
+                </div>
+              </div>
+                <div class="col-2">
+                <div class="smallcard4" style="width: 8rem;">
+                  <div class="card-body">
+                    <p class="card-text">Mon <br /> <i class="fa-solid fa-cloud-showers-heavy"> </i> <br /> L:15°C H:24°C</p>
+                 </div>
+                </div>
+              </div>
+                <div class="col-2">
+                <div class="smallcard5" style="width: 8rem;">
+                  <div class="card-body">
+                    <p class="card-text">Tue <br /> <i class="fa-solid fa-cloud-showers-heavy"> </i> <br /> L:17°C H:23°C</p>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="coded">Coded by Priyal Dalal</dic>
+
+      </div>
+    </div>
+  <script src="src/index.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,212 @@
+body {
+  margin: 25px;
+  background-image: url(images/background1.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: black;
+  font-family: "Concert One", cursive;
+  font-weight: 100px;
+}
+
+container {
+  padding: 50px;
+  margin: 25px;
+  color: black;
+}
+input,
+#city-input {
+  max-width: 595px;
+  color: black;
+}
+input,
+#city-input,
+button {
+  background-color: rgba(198, 205, 204, 70%);
+  border: solid 1px #070329;
+  border-radius: 10px;
+  padding: 3px;
+  font-size: 10px;
+  margin: 5px 1px;
+  color: black;
+  position: relative;
+  left: 400px;
+  max-width: 150px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+input:hover {
+  cursor: text;
+}
+
+.card {
+  border: solid 2px #111924;
+  padding: 10px;
+  margin: auto;
+  background-color: rgba(198, 205, 204, 70%);
+  color: black;
+  max-width: 600px;
+}
+#city {
+  margin-top: 50px;
+  font-size: 40px;
+  margin-bottom: 2px;
+  font-weight: bold;
+  color: black;
+  margin-left: 20px;
+}
+#date,
+#description,
+#description {
+  margin-top: 0px;
+  font-size: 15px;
+  margin-bottom: 0px;
+  color: black;
+  margin-left: 20px;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+}
+h3,
+#units {
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 70px;
+  margin-bottom: 2px;
+  color: black;
+  margin-left: -7px;
+}
+#units {
+  font-size: 20px;
+  margin-left: -15px;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+}
+a {
+  color: black;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+}
+
+h5 {
+  margin-top: 0px;
+  font-size: 12px;
+  font-weight: lighter;
+  margin-left: 20px;
+  font-weight: 400;
+  font-family: "Recursive", sans-serif;
+}
+#high {
+  margin-left: -32px;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+}
+.high {
+  margin-left: -5px;
+}
+
+#low {
+  margin-left: 0px;
+}
+.low {
+  margin-left: -5px;
+}
+
+.details,
+#conditions {
+  font-size: 13px;
+  margin-top: 4px;
+  margin-left: 0px;
+  font-weight: 400px;
+  color: black;
+  font-family: "Recursive", sans-serif;
+}
+#humidity,
+#wind,
+#pressure {
+  margin-left: -30px;
+}
+.unit {
+  margin-left: 0px;
+}
+.conditions {
+  margin-top: 3px;
+  margin-left: 0px;
+}
+span {
+  position: relative;
+  right: -30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 13px;
+}
+.smallcard1 {
+  margin: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: solid 1px #111924;
+  border-radius: 20px;
+  max-width: 100px;
+  text-align: center;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+}
+.smallcard2 {
+  margin: 25px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: solid 1px #111924;
+  border-radius: 20px;
+  max-width: 100px;
+  text-align: center;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+}
+.smallcard3 {
+  margin: 35px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: solid 1px #111924;
+  border-radius: 20px;
+  max-width: 100px;
+  text-align: center;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+}
+.smallcard4 {
+  margin: 45px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: solid 1px #111924;
+  border-radius: 20px;
+  max-width: 100px;
+  text-align: center;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+}
+.smallcard5 {
+  margin: 55px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: solid 1px #111924;
+  border-radius: 20px;
+  max-width: 100px;
+  text-align: center;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+}
+.weathericon {
+  font-size: 80px;
+  position: relative;
+  right: -30px;
+}
+.coded {
+  text-align: center;
+  margin-top: 15px;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+  font-size: 13px;
+}
