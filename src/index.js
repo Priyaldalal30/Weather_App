@@ -65,7 +65,6 @@ function showWeather(response) {
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
-  console.log(response);
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
@@ -82,6 +81,11 @@ function showWeather(response) {
 
   document.querySelector("#low").innerHTML = Math.round(
     response.data.main.temp_min
+  );
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 

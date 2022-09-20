@@ -1,6 +1,6 @@
 body {
   margin: 25px;
-  background-image: url(images/background1.jpg);
+  background-image: url("..images/background1.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -22,7 +22,7 @@ input,
 input,
 #city-input,
 button {
-  background-color: rgba(198, 205, 204, 70%);
+  background-color: rgba(204, 210, 209, 0.7);
   border: solid 1px #070329;
   border-radius: 10px;
   padding: 3px;
@@ -45,7 +45,7 @@ input:hover {
   border: solid 2px #111924;
   padding: 10px;
   margin: auto;
-  background-color: rgba(198, 205, 204, 70%);
+  background-color: rgba(231, 255, 251, 0.156);
   color: black;
   max-width: 600px;
 }
