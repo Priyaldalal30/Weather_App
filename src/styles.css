@@ -43,9 +43,10 @@ input:hover {
 
 .card {
   border: solid 2px #111924;
+  border-radius: 10px;
   padding: 10px;
   margin: auto;
-  background-color: rgba(231, 255, 251, 0.156);
+  background-color: #c0b0a174;
   color: black;
   max-width: 600px;
 }
@@ -210,6 +211,7 @@ p {
   text-align: center;
   margin-top: 15px;
   font-family: "Recursive", sans-serif;
-  font-weight: 400px;
-  font-size: 13px;
+  font-weight: bolder;
+  font-size: 14px;
+  color: black;
 }
