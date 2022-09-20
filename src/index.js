@@ -91,7 +91,7 @@ function showWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  celsiusTemp = math.round(response.data.main.temp);
+  celsiusTemp = Math.round(response.data.main.temp);
 }
 
 function searchCity(city) {
