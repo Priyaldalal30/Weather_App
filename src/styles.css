@@ -59,7 +59,6 @@ input:hover {
   margin-left: 20px;
 }
 #date,
-#description,
 #description {
   margin-top: 0px;
   font-size: 15px;
@@ -203,7 +202,6 @@ p {
   font-weight: 400px;
 }
 .weathericon {
-  font-size: 80px;
   position: relative;
   right: -30px;
 }

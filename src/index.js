@@ -43,21 +43,16 @@ let updatedDate = document.querySelector("#date");
 let currentTime = new Date();
 updatedDate.innerHTML = formatDate(currentTime);
 
-let celsiusButton = document.querySelector("#celsius-link");
-
-function convertToCelsius() {
-  let currentValue = document.querySelector("#temp");
-  currentValue.innerHTML = `21°`;
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemp = document.querySelector("#temp");
+  let tempElement = (celsiusTemp * 9) / 5 + 32;
+  fahrenheitTemp.innerHTML = Math.round(tempElement);
 }
 
-celsiusButton.addEventListener("click", convertToCelsius);
+let celsiusTemp = null;
 
 let fahrenheitButton = document.querySelector("#fahrenheit-link");
-
-function convertToFahrenheit() {
-  let currentValue = document.querySelector("#temp");
-  currentValue.innerHTML = `69.8°`;
-}
 fahrenheitButton.addEventListener("click", convertToFahrenheit);
 
 function showWeather(response) {
@@ -87,6 +82,7 @@ function showWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  celsiusTemp = response.data.main.temp;
 }
 
 function searchCity(city) {
