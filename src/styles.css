@@ -207,6 +207,11 @@ p {
   position: relative;
   right: -30px;
 }
+
+.weathericon img {
+  width: 150px;
+  height: 150px;
+}
 .coded {
   text-align: center;
   margin-top: 15px;
