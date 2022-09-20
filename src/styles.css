@@ -67,6 +67,8 @@ input:hover {
   margin-left: 20px;
   font-family: "Recursive", sans-serif;
   font-weight: 400px;
+}
+#description::first-letter {
   text-transform: capitalize;
 }
 h3,
