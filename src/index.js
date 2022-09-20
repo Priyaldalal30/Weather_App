@@ -53,7 +53,7 @@ function convertToFahrenheit(event) {
 function convertToCelsius(event) {
   event.preventDefault();
   let celsiusTemperature = document.querySelector("#temp");
-  celsiusTemperature.innerHTML = math.round(celsiusTemp);
+  celsiusTemperature.innerHTML = celsiusTemp;
 }
 
 let celsiusTemp = null;
@@ -91,7 +91,7 @@ function showWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  celsiusTemp = response.data.main.temp;
+  celsiusTemp = math.round(response.data.main.temp);
 }
 
 function searchCity(city) {
