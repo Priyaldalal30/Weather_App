@@ -50,10 +50,19 @@ function convertToFahrenheit(event) {
   fahrenheitTemp.innerHTML = Math.round(tempElement);
 }
 
+function convertToCelsius(event) {
+  event.preventDefault();
+  let celsiusTemperature = document.querySelector("#temp");
+  celsiusTemperature.innerHTML = celsiusTemp;
+}
+
 let celsiusTemp = null;
 
 let fahrenheitButton = document.querySelector("#fahrenheit-link");
 fahrenheitButton.addEventListener("click", convertToFahrenheit);
+
+let celsiusButton = document.querySelector("#celsius-link");
+celsiusButton.addEventListener("click", convertToCelsius);
 
 function showWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
