@@ -53,7 +53,7 @@ function convertToFahrenheit(event) {
 function convertToCelsius(event) {
   event.preventDefault();
   let celsiusTemperature = document.querySelector("#temp");
-  celsiusTemperature.innerHTML = celsiusTemp;
+  celsiusTemperature.innerHTML = math.round(celsiusTemp);
 }
 
 let celsiusTemp = null;
