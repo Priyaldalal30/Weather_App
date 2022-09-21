@@ -43,6 +43,14 @@ let updatedDate = document.querySelector("#date");
 let currentTime = new Date();
 updatedDate.innerHTML = formatDate(currentTime);
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function convertToFahrenheit(event) {
   event.preventDefault();
   let fahrenheitTemp = document.querySelector("#temp");
@@ -73,20 +81,16 @@ function showWeather(response) {
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
-
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
   document.querySelector("#pressure").innerHTML = response.data.main.pressure;
-
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
-
   document.querySelector("#high").innerHTML = Math.round(
     response.data.main.temp_max
   );
-
   document.querySelector("#low").innerHTML = Math.round(
     response.data.main.temp_min
   );
@@ -133,29 +137,36 @@ currentLocation.addEventListener("click", getCurrentLocation);
 
 function getForecast(coordinates) {
   let apiKey = "f3887e262c88d1158f7e2ef4998e234c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metrtic`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#days");
 
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
         <div class="col-2">
           <div class="smallcard1" style="width: 15rem;">
               <div class="card-body">
-                <p class="card-text">${day} <br /> <i class="fa-solid fa-cloud-showers-heavy"> </i> <br /> L:13°C H:19°C</p>
+                <p class="card-text">${formatDay(
+                  forecastDay.dt
+                )} <br /> <img src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png" width="45"/> <br /> L:${Math.round(
+          forecastDay.temp.max
+        )}°C H:${Math.round(forecastDay.temp.min)}°C</p>
               </div>
           </div>
         </div>
         `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
