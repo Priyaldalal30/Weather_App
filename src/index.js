@@ -96,10 +96,12 @@ function showWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   celsiusTemp = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
-  let apiKey = "bdc96064ff0660a2e7648f3da299d4f3";
+  let apiKey = "f3887e262c88d1158f7e2ef4998e234c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
 }
@@ -112,7 +114,7 @@ function search(event) {
 }
 
 function searchLocation(position) {
-  let apiKey = "bdc96064ff0660a2e7648f3da299d4f3";
+  let apiKey = "f3887e262c88d1158f7e2ef4998e234c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showWeather);
@@ -129,7 +131,14 @@ searchForm.addEventListener("submit", search);
 let currentLocation = document.querySelector("#location");
 currentLocation.addEventListener("click", getCurrentLocation);
 
-function displayForecast() {
+function getForecast(coordinates) {
+  let apiKey = "f3887e262c88d1158f7e2ef4998e234c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metrtic`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#days");
 
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
@@ -151,7 +160,5 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-displayForecast();
 
 searchCity("Woking");
