@@ -130,33 +130,27 @@ let currentLocation = document.querySelector("#location");
 currentLocation.addEventListener("click", getCurrentLocation);
 
 function displayForecast() {
-  let weatherForecast = document.querySelector("#days");
+  let forecastElement = document.querySelector("#days");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
 
   let forecastHTML = `<div class="row">`;
-  forecastHTML =
-    forecastHTML +
-    `
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
         <div class="col-2">
           <div class="smallcard1" style="width: 8rem;">
               <div class="card-body">
-                <p class="card-text">Fri <br /> <i class="fa-solid fa-cloud-showers-heavy"> </i> <br /> L:13°C H:19°C</p>
+                <p class="card-text">${day} <br /> <i class="fa-solid fa-cloud-showers-heavy"> </i> <br /> L:13°C H:19°C</p>
               </div>
           </div>
         </div>
-        </div>`;
-  forecastHTML =
-    forecastHTML +
-    `
-        <div class="col-2">
-          <div class="smallcard1" style="width: 8rem;">
-              <div class="card-body">
-                <p class="card-text">Fri <br /> <i class="fa-solid fa-cloud-showers-heavy"> </i> <br /> L:13°C H:19°C</p>
-              </div>
-          </div>
         </div>
-        </div>`;
+        `;
+  });
   forecastHTML = forecastHTML + `</div>`;
-  weatherForecast.innerHTML = forecastHTML;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 displayForecast();

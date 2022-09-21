@@ -149,9 +149,6 @@ span {
 p {
   font-size: 13px;
 }
-#days {
-  flex-wrap: wrap;
-}
 .smallcard1 {
   margin: 15px;
   margin-top: 20px;
@@ -161,51 +158,6 @@ p {
   max-width: 150%;
   text-align: center;
   font-family: "Recursive", sans-serif;
-}
-.smallcard2 {
-  margin: 25px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border: solid 1px #111924;
-  border-radius: 20px;
-  max-width: 150%;
-  text-align: center;
-  font-family: "Recursive", sans-serif;
-  font-weight: 400px;
-}
-.smallcard3 {
-  margin: 35px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border: solid 1px #111924;
-  border-radius: 20px;
-  max-width: 150%;
-  text-align: center;
-  font-family: "Recursive", sans-serif;
-  font-weight: 400px;
-}
-.smallcard4 {
-  margin: 45px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border: solid 1px #111924;
-  border-radius: 20px;
-  max-width: 150%;
-  text-align: center;
-  font-family: "Recursive", sans-serif;
-  font-weight: 400px;
-}
-.smallcard5 {
-  margin: 55px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border: solid 1px #111924;
-  border-radius: 20px;
-  max-width: 150%;
-  text-align: center;
-  font-family: "Recursive", sans-serif;
-  font-weight: 400px;
-  flex: auto;
 }
 .weathericon {
   position: relative;
