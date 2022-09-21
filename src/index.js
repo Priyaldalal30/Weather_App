@@ -129,4 +129,36 @@ searchForm.addEventListener("submit", search);
 let currentLocation = document.querySelector("#location");
 currentLocation.addEventListener("click", getCurrentLocation);
 
+function displayForecast() {
+  let weatherForecast = document.querySelector("#days");
+
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `
+        <div class="col-2">
+          <div class="smallcard1" style="width: 8rem;">
+              <div class="card-body">
+                <p class="card-text">Fri <br /> <i class="fa-solid fa-cloud-showers-heavy"> </i> <br /> L:13°C H:19°C</p>
+              </div>
+          </div>
+        </div>
+        </div>`;
+  forecastHTML =
+    forecastHTML +
+    `
+        <div class="col-2">
+          <div class="smallcard1" style="width: 8rem;">
+              <div class="card-body">
+                <p class="card-text">Fri <br /> <i class="fa-solid fa-cloud-showers-heavy"> </i> <br /> L:13°C H:19°C</p>
+              </div>
+          </div>
+        </div>
+        </div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  weatherForecast.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 searchCity("Woking");

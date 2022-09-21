@@ -149,7 +149,7 @@ span {
 p {
   font-size: 13px;
 }
-.days {
+#days {
   flex-wrap: wrap;
 }
 .smallcard1 {
