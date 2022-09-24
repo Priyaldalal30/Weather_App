@@ -150,18 +150,20 @@ p {
   font-size: 13px;
 }
 .smallcard1 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
   border: solid 1px #111924;
   border-radius: 20px;
   max-width: 150%;
+  display: flex;
+
   text-align: center;
   font-family: "Recursive", sans-serif;
 }
 
-.col-2 {
-  margin-right: 11px;
+.col-sm-2 {
+  margin-right: 15px;
+  justify-content: space-evenly;
+  justify-content: center;
+  justify-content: space-between;
 }
 .weathericon {
   position: relative;
