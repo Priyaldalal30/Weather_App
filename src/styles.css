@@ -129,8 +129,8 @@ h5 {
 }
 #humidity,
 #wind,
-#pressure {
-  margin-left: -30px;
+#visibility {
+  margin-left: -27px;
 }
 .unit {
   margin-left: 0px;

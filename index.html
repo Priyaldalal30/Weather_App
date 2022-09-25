@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Recursive:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Recursive:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -15,73 +18,86 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/styles.css" />
-    <script src="https://kit.fontawesome.com/5bde5bf2d0.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5bde5bf2d0.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/5bde5bf2d0.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container-fluid">
       <div class="card">
         <form id="search-form">
-          <input
-        type="search"
-        placeholder="Type City"
-        id="city-input"
-        />
-         <button class="search">🔍</button>      
+          <input type="search" placeholder="Type City" id="city-input" />
+          <button class="search">🔍</button>
           <button id="location">📍</button>
         </form>
         <div id="city"></div>
-         <div id="date">Wednesday 7th September 15:30</div>
-          <h3>
-          <span id="temp">21  </span>
+        <div id="date">Wednesday 7th September 15:30</div>
+        <h3>
+          <span id="temp">21 </span>
           <span id="units">
             <a href="#" id="celsius-link" class="active">°C</a> |
             <a href="#" id="fahrenheit-link">°F</a>
           </span>
-          </h3>
-           <div id="description" ></div>
+        </h3>
+        <div id="description"></div>
         <h5>
-          <div>H:
+          <div>
+            H:
             <span id="high">19</span>
             <span class="high"> °C | L:</span><span id="low">19</span>
             <span class="low"> °C</span>
-          </div> 
+          </div>
         </h5>
-          <h7>
-            <div class="row">
-              <div class="col-ms-4">
-                <div class="weathericon"> 
-                  <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="weathericon" id="icon">
-                </div>
+        <h7>
+          <div class="row">
+            <div class="col-ms-4">
+              <div class="weathericon">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="weathericon"
+                  id="icon"
+                />
               </div>
-              <div class="col-ms-8">
-                <div class="details">
-                  <br /> 
-                  <div>Humidity: 
-                    <span id="humidity"></span> <span class="unit">%</span>
-                  </div>  
-                  <br />
-                  <div>Wind:
-                    <span id="wind"></span> <span class="unit">mph</span>
-                  </div> 
-                  <br />
-                  <div>Pressure:
-                    <span id="pressure"></span> <span class="unit">hPa</span>  
-                  </div>
-                </div>
-              </div>
-              <br />
             </div>
-          </h7>
-          <div id="days"></div> 
-      </div>
+            <div class="col-ms-8">
+              <div class="details">
+                <br />
+                <div>
+                  <i class="fa-solid fa-droplet"></i> Humidity:
+                  <span id="humidity"></span> <span class="unit">%</span>
+                </div>
+                <br />
+                <div>
+                  <i class="fa-solid fa-wind"></i> Wind: <span id="wind"></span>
+                  <span class="unit">mph</span>
+                </div>
+                <br />
+                <div>
+                  <i class="fa-solid fa-eye"></i> Visibility:
+                  <span id="visibility"></span>
+                  <span class="unit">mi</span>
+                </div>
               </div>
-          <div class="coded"><a href="https://github.com/Priyaldalal30/Weather_App" target="_blank">Open Source Code</a> by Priyal Dalal | Hosted on <a href="https://www.netlify.com/" target="_blank" >Netlify</a> </div>
-
+            </div>
+            <br />
+          </div>
+        </h7>
+        <div id="days"></div>
       </div>
     </div>
-  <script src="src/index.js"></script>
-
+    <div class="coded">
+      <a href="https://github.com/Priyaldalal30/Weather_App" target="_blank"
+        >Open Source Code</a
+      >
+      by Priyal Dalal | Hosted on
+      <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+    </div>
+    <script src="src/index.js"></script>
   </body>
-
 </html>

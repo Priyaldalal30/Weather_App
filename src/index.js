@@ -85,7 +85,9 @@ function showWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#pressure").innerHTML = response.data.main.pressure;
+  document.querySelector("#visibility").innerHTML = Math.round(
+    response.data.visibility / 1609
+  );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#high").innerHTML = Math.round(
@@ -100,7 +102,6 @@ function showWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   celsiusTemp = response.data.main.temp;
-
   getForecast(response.data.coord);
 }
 
