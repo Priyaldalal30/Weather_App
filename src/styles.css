@@ -167,7 +167,6 @@ p {
 }
 .weathericon {
   position: relative;
-  right: -30px;
 }
 
 .weathericon img {
