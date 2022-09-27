@@ -115,7 +115,6 @@ function search(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
   searchCity(city);
-  searchCity("Woking");
 }
 
 function searchLocation(position) {
@@ -172,3 +171,4 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+searchCity("Woking");
