@@ -17,6 +17,12 @@ input,
   height: 30px;
   color: black;
 }
+@media (max-width: 590px) {
+  input,
+  #city-input {
+    width: 100px;
+  }
+}
 input,
 #city-input,
 button {
@@ -133,6 +139,11 @@ h5 {
 #visibility {
   margin-left: -27px;
 }
+@media (max-width: 470px) {
+  .details {
+    margin-left: 20px;
+  }
+}
 .unit {
   margin-left: 0px;
 }
@@ -164,6 +175,11 @@ p {
   justify-content: space-evenly;
   justify-content: center;
   justify-content: space-between;
+}
+@media (max-width: 470px) {
+  .smallcard1 {
+    max-width: 80%;
+  }
 }
 .weathericon {
   position: relative;
