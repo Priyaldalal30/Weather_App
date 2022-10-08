@@ -11,7 +11,7 @@ body {
 }
 @media (max-width: 480px) {
   body {
-    margin: 30px;
+    margin: 20px;
   }
 }
 input,
