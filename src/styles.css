@@ -9,7 +9,11 @@ body {
   font-weight: 100px;
   min-height: 750px;
 }
-
+@media (max-width: 480px) {
+  body {
+    margin: 30px;
+  }
+}
 input,
 #city-input {
   max-width: 595px;
