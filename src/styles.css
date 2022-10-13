@@ -9,12 +9,7 @@ body {
   font-weight: 100px;
   min-height: 750px;
 }
-@media (max-width: 480px) {
-  body {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
+
 input,
 #city-input {
   max-width: 595px;
@@ -22,12 +17,7 @@ input,
   height: 30px;
   color: black;
 }
-@media (max-width: 590px) {
-  input,
-  #city-input {
-    width: 100px;
-  }
-}
+
 input,
 #city-input,
 button {
@@ -144,11 +134,7 @@ h5 {
 #visibility {
   margin-left: -27px;
 }
-@media (max-width: 470px) {
-  .details {
-    margin-left: 20px;
-  }
-}
+
 .unit {
   margin-left: 0px;
 }
@@ -181,11 +167,7 @@ p {
   justify-content: center;
   justify-content: space-between;
 }
-@media (max-width: 470px) {
-  .smallcard1 {
-    max-width: 80%;
-  }
-}
+
 .weathericon {
   position: relative;
 }
@@ -203,41 +185,54 @@ p {
   text-decoration: none;
   color: black;
 }
-.codeLink {
-  color: black;
-  text-decoration: none;
-  margin-left: 3px;
-}
-.codeLink:hover {
-  color: black;
-  text-decoration: underline;
-}
-.coded {
-  margin-bottom: 30px;
-  color: black;
-  font-size: 14px;
+
+.footer {
+  margin-top: 60px;
+  border-top: 1px solid black;
   font-family: "Recursive", sans-serif;
-  display: flex;
-  justify-content: start;
 }
-.mediaLinks {
+
+.logo {
+  font-family: "Audiowide", cursive;
+  font-size: 25px;
   display: flex;
-  justify-content: end;
-  margin-top: -60px;
+  justify-content: left;
+  margin-top: 10px;
+}
+
+.coded,
+.links {
+  margin-top: -30px;
+  text-align: end;
+  margin-bottom: 12px;
+  line-height: 20px;
+}
+.links {
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+.netlifyLink,
+.priyal {
+  text-decoration: none;
   color: black;
-  margin-bottom: 30px;
 }
-@media (max-width: 595px) {
-  .mediaLinks {
-    margin-top: -40px;
-  }
+.netlifyLink:hover,
+.priyal:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #5cc2b2;
 }
+
 .linkedin,
 .facebook,
 .instagram,
 .github {
   padding-left: 10px;
   padding-right: 10px;
+}
+.github {
+  padding-right: 0px;
 }
 .linkedlink,
 .fblink,
@@ -246,10 +241,40 @@ p {
   color: black;
   text-decoration: none;
 }
-.linkedlink:hover,
-.fblink:hover,
-.instalink:hover,
+.linkedlink:hover {
+  color: #1066c2;
+}
+.fblink:hover {
+  color: #3b5998;
+}
+.instalink:hover {
+  color: #e0447c;
+}
 .githublink:hover {
-  color: black;
-  text-decoration: underline;
+  color: #682e8e;
+}
+
+@media (max-width: 470px) {
+  .smallcard1 {
+    max-width: 80%;
+  }
+  .details {
+    margin-left: 20px;
+  }
+  body {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 590px) {
+  input,
+  #city-input {
+    width: 100px;
+  }
+}
+@media (max-width: 400px) {
+  .coded {
+    margin-top: 20px;
+  }
 }
