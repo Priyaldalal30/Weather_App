@@ -202,14 +202,13 @@ p {
 
 .coded,
 .links {
-  margin-top: -30px;
-  text-align: end;
+  margin-top: 0px;
+  text-align: start;
   margin-bottom: 12px;
   line-height: 20px;
 }
 .links {
-  margin-right: 30px;
-  margin-top: 20px;
+  margin-left: -35px;
 }
 
 .netlifyLink,
@@ -271,10 +270,5 @@ p {
   input,
   #city-input {
     width: 100px;
-  }
-}
-@media (max-width: 400px) {
-  .coded {
-    margin-top: 20px;
   }
 }
