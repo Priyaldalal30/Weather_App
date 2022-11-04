@@ -121,8 +121,7 @@ h5 {
   margin-left: -5px;
 }
 
-.details,
-#conditions {
+.details {
   font-size: 13px;
   margin-top: 4px;
   font-weight: 400px;
@@ -138,10 +137,7 @@ h5 {
 .unit {
   margin-left: 0px;
 }
-.conditions {
-  margin-top: 3px;
-  margin-left: 0px;
-}
+
 span {
   position: relative;
   right: -30px;
