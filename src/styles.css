@@ -209,8 +209,8 @@ p {
 
 .netlifyLink,
 .priyal {
-  text-decoration: none;
   color: black;
+  text-decoration: underline;
 }
 .netlifyLink:hover,
 .priyal:hover {
